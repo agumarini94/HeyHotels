@@ -1,0 +1,8 @@
+/* Esto ayuda a que el fondo gris de tu login ocupe toda la pantalla sin bordes blancos */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}

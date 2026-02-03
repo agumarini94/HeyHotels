@@ -1,0 +1,1074 @@
+/* --- RESET Y BASE --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #1f2937;
+  line-height: 1.5;
+}
+
+/* --- LOGIN PAGE --- */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f4f7f6 0%, #e0e7ff 100%);
+}
+
+.login-form {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form h2 {
+  color: #4338ca;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.login-form h3 {
+  color: #6b7280;
+  margin-bottom: 25px;
+  font-weight: 400;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  background: #4338ca;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.login-form button:hover {
+  background: #3730a3;
+}
+
+/* --- NAVEGACIÓN --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.role-badge {
+  font-size: 0.6em;
+  background: #e0e7ff;
+  color: #4338ca;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* --- NUEVA NAVBAR PRINCIPAL --- */
+.main-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1f2937;
+  padding: 0.8rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.nav-logo {
+  display: flex;
+  /* Activa el modo fila */
+  align-items: center;
+  /* Los centra verticalmente para que queden alineados */
+  gap: 15px;
+  /* Espacio de separación entre el logo y el nombre */
+}
+.nav-logo a {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fbbf24 !important;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-greeting {
+  font-size: 0.9rem;
+  color: yellowgreen;
+  /* Color blanco para el "Hi," (ajustalo si tu fondo es claro) */
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  /* Rayita divisoria sutil */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.nav-greeting strong {
+  color: yellowgreen;
+  /* Un color amarillo/dorado que resalta mucho sobre fondos oscuros */
+  text-transform: capitalize;
+  /* Asegura que la primera letra sea mayúscula */
+  font-weight: 600;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #fbbf24;
+}
+
+.nav-auth {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  background: #374151;
+  padding: 4px 10px;
+  border-radius: 6px;
+  color: #d1d5db;
+  border: 1px solid #4b5563;
+}
+
+.btn-logout {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-logout:hover {
+  background: #dc2626;
+}
+
+/* --- ESTILOS ESPECIFICOS DEL PERFIL (PROFILE) --- */
+.profile-container {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 500px !important;
+  /* Forzamos ancho para que no se estire */
+  margin: 50px auto !important;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.current-location-badge {
+  background-color: #f3f4f6;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  border-left: 5px solid #4338ca;
+  text-align: left;
+}
+
+.current-location-badge p {
+  margin: 0;
+  color: #4b5563;
+  font-size: 1rem;
+}
+
+.current-location-badge strong {
+  color: #4338ca;
+  text-transform: uppercase;
+}
+
+.btn-save-profile {
+  width: 100%;
+  background-color: #4338ca;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+
+.btn-save-profile:hover {
+  background-color: #3730a3;
+  transform: translateY(-1px);
+}
+
+.btn-save-profile:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* --- CONTENEDORES Y GRIDS --- */
+.dashboard-container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.hotel-content,
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.auction-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 20px;
+}
+
+.auction-grid-carousel {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  gap: 20px;
+  padding: 10px 5px 25px 5px;
+  scroll-behavior: smooth;
+  width: 100%;
+  list-style: none;
+  scroll-snap-type: x mandatory;
+}
+
+.auction-grid-carousel::-webkit-scrollbar {
+  height: 10px;
+}
+
+.auction-grid-carousel::-webkit-scrollbar-thumb {
+  background: #4338ca;
+  border-radius: 10px;
+}
+
+.auction-grid-carousel::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.requests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* --- TARJETAS (CARDS) --- */
+.card,
+.auction-card,
+.mini-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.auction-card {
+  flex: 0 0 350px !important;
+  min-width: 350px !important;
+  max-width: 350px !important;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+
+.mini-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 5px solid #4338ca;
+}
+
+.city-section {
+  margin-bottom: 40px;
+}
+
+.city-title {
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+/* --- FORMULARIOS DE PUJA (HOTEL) --- */
+.bid-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 15px;
+  border-top: 1px dashed #d1d5db;
+}
+
+.bid-form input,
+.bid-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.btn-id {
+  background: #4338ca;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --- INPUT GROUPS (COMPANY DASHBOARD) --- */
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* --- MODALES Y OFERTAS --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  /* Subido para estar sobre la navbar */
+}
+
+.modal-content {
+  background: white;
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  padding: 30px;
+  border-radius: 16px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.bid-item {
+  border: 1px solid #e5e7eb;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background: #f9fafb;
+}
+
+.italic {
+  font-style: italic;
+  color: #6b7280;
+  font-size: 0.9em;
+  padding: 5px;
+  background: white;
+  border-radius: 4px;
+  display: block;
+}
+
+/* --- BOTONES ADICIONALES --- */
+.btn-primary,
+.btn-accept {
+  background: #10b981;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.btn-view {
+  background: #f3f4f6;
+  color: #4338ca;
+  border: 1px solid #4338ca;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-btn {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* --- AUTH ADICIONAL --- */
+.role-label {
+  margin-top: 10px;
+  font-size: 0.85em;
+  font-weight: bold;
+  color: #444;
+}
+
+.role-select {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.switch-auth {
+  margin-top: 15px;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.switch-auth a {
+  color: #4338ca;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.auth-footer p {
+  margin-bottom: 5px;
+  color: #666;
+}
+
+.register-link {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+  color: #1557b0;
+}
+
+/* --- HISTORIAL Y WHATSAPP --- */
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.history-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.history-card h3 {
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.history-card p {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #4b5563;
+}
+
+.btn-whatsapp {
+  margin-top: 15px;
+  background: #25d366;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+}
+
+/* --- AJUSTE CONTENEDOR --- */
+.main-container {
+  padding: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.winner-badge {
+  background: #dcfce7;
+  color: #166534;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* --- CITY PREDICTOR (BUSCADOR) --- */
+.city-predictor-container {
+  position: relative;
+  width: 100%;
+}
+
+.city-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  /* Subido para que siempre esté arriba de las cards */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion-list li {
+  padding: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+.suggestion-list li:hover {
+  background-color: #f5f5f5;
+  color: #4338ca;
+}
+
+/* PARA LOS BOTONES DELETE DE HOTEL Y COMPANIA  */
+.btn-delete-mini {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #f87171;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-delete-mini:hover {
+  background: #ef4444;
+  color: white;
+}
+
+/* ESTO ES PARA LOS ESTADOS DEL DASHBOARD HOTEL */
+.status-open {
+  color: #10b981;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.status-closed {
+  color: #6b7280;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.description-box {
+  background: #f9fafb;
+  border-left: 4px solid #fbbf24;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.description-text {
+  font-size: 0.9rem;
+  color: #4b5563;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* CARRUSEL DE FOTOS */
+.carousel-container {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px 5px;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  flex: 0 0 220px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.carousel-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.2);
+  border-color: #4338ca;
+}
+
+/* SELECTOR DE VISTA DASHBOARD HOTEL */
+.view-selector {
+  display: inline-flex;
+  background-color: #f3f4f6;
+  padding: 6px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.btn-active {
+  background-color: #4338ca !important;
+  color: white !important;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.btn-inactive {
+  background-color: transparent !important;
+  color: #6b7280 !important;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn-inactive:hover {
+  color: #111827 !important;
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.loader-mini {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.auction-description {
+  background-color: #f8fafc;
+  /* Un fondo gris muy clarito */
+  padding: 8px;
+  border-radius: 6px;
+  margin: 10px 0;
+  font-size: 0.85rem;
+  border-left: 3px solid yellowgreen;
+  /* El color que te gusta */
+}
+
+.desc-text {
+  display: block;
+  margin-top: 4px;
+  color: #475569;
+  font-style: italic;
+  /* Esto es por si escriben un testamento, que no se deforme la tarjeta */
+  max-height: 60px;
+  overflow-y: auto;
+}
+
+.mini-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Contenedor principal de la sección */
+.amenities-section {
+  margin: 20px 0;
+}
+
+.section-title {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+/* Grilla adaptable */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+  background-color: #f9fafb;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Cada ítem (label + checkbox) */
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: #4b5563;
+  transition: all 0.2s ease;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.amenity-item:hover {
+  background-color: #f3f4f6;
+}
+
+/* Estilo cuando está seleccionado */
+.amenity-item.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.amenity-item input {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+/* Estilos para las etiquetas de requisitos en la tarjeta del hotel */
+.amenities-display {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f8fafc;
+  /* Un gris muy suave de fondo */
+  border-radius: 8px;
+}
+
+.amenity-badge {
+  background-color: #e0f2fe;
+  /* Azul claro */
+  color: #0369a1;
+  /* Azul oscuro para el texto */
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid #bae6fd;
+  display: inline-block;
+}
+
+/* Botones de filtro */
+.category-filter-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 2px solid #4338ca;
+  background: white;
+  color: #4338ca;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filter-btn.active {
+  background: #4338ca;
+  color: white;
+}
+
+/* Etiquetas en las tarjetas */
+.category-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.category-badge.event {
+  background-color: #f59e0b;
+}
+
+/* Dorado */
+.category-badge.group {
+  background-color: #10b981;
+}
+
+/* Verde */
+.category-badge.company {
+  background-color: #3b82f6;
+}
+
+/* Azul */
+
+
+/* Resaltado de la sección de categoría */
+.category-highlight-section {
+  background-color: #f0f7ff;
+  /* Azul muy suave */
+  padding: 20px;
+  border-radius: 12px;
+  border: 2px dashed #4338ca;
+  /* Borde punteado azul */
+  margin-bottom: 25px !important;
+  box-shadow: 0 4px 12px rgba(67, 56, 202, 0.1);
+  transition: all 0.3s ease;
+}
+
+.category-highlight-section:hover {
+  border-color: #3730a3;
+  background-color: #e5f0ff;
+}
+
+.highlight-label {
+  color: #4338ca !important;
+  font-weight: 800 !important;
+  font-size: 1.1rem !important;
+  margin-bottom: 12px !important;
+}
+
+.category-select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #d1d5db;
+  background-color: white;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.category-select:focus {
+  border-color: #4338ca;
+  outline: none;
+}
+
+.category-help-text {
+  display: block;
+  margin-top: 8px;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+
+.status-selector .filter-btn {
+  background-color: #f3f4f6;
+  border: 2px solid #e5e7eb;
+  color: #6b7280;
+  transition: all 0.3s ease;
+}
+
+.status-selector .filter-btn.active {
+  background-color: #4338ca;
+  border-color: #4338ca;
+  color: white;
+  box-shadow: 0 4px 10px rgba(67, 56, 202, 0.2);
+}
+
+.status-selector .filter-btn:hover:not(.active) {
+  background-color: #e5e7eb;
+}
+
+
+.signature-footer {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  /* Un gris suave para que no distraiga */
+  z-index: 9999;
+  pointer-events: none;
+  /* Para que no interfiera si hay un botón debajo */
+}
+
+.signature-footer strong {
+  color: #4338ca;
+  /* El color azul de tu app para resaltar tu nombre */
+  font-weight: 600;
+}
+
+/* Estilo base del badge */
+.bids-badge {
+  margin-top: 10px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  /* Para que el cambio de color sea suave */
+}
+
+/* Estado: Sin ofertas aún */
+.empty-bids {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  border: 1px solid #e5e7eb;
+}
+
+/* Estado: Con ofertas recibidas */
+.has-bids {
+  background-color: #2f46e5;
+  color: white;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+  animation: subtle-pulse 2s infinite;
+  /* Opcional: un pulso muy suave */
+}
+
+/* Animación opcional para llamar la atención sobre las ofertas nuevas */
+@keyframes subtle-pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}             
