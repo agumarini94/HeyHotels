@@ -16,7 +16,7 @@ const Login = () => {
 
         try {
             //envio los datos al endpoint que cree en el backend. (donde se hace el punto de entrada al server)
-            const res = await axios.post('http://localhost:5005/api/auth/login', { email, password });
+            const res = await axios.post('https://heyhotels.onrender.com/api/auth/login', { email, password });
 
             //* 4) GUARDO EL TOKEN Y EL ROLE (para futuras peticiones, y para saber que ventana mostrar)
             //el localStorage no se borra aunque actualice la pagina.

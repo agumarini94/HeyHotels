@@ -29,7 +29,7 @@ const Register = () => {
         e.preventDefault();
         try {
             //envio el objeto completo al endpoint de registro del servidor. 
-            await axios.post('http://localhost:5005/api/auth/register', formData);
+            await axios.post('https://heyhotels.onrender.com/api/auth/register', formData);
             setMessage("Welcome to HeyHotels! Redirecting to login...")
             //si sale bien , le muestro el mensaje al usuario para que lo lea, y lo envio al login. 
             setTimeout(() => navigate('/login'), 2000);

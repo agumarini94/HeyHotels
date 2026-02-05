@@ -43,7 +43,7 @@ const CompanyDashboard = () => {
             //* 3) LLAMADO AL BACKEND.
             //envio mediante post , con el cuerpo del mensaje (body) y el header
             //await (pausa la accion antes de continuar con el codigo hasta recibir los datos ) y el axios hace la conexion con el endPoint, que es http... 
-            await axios.post('http://localhost:5005/api/auctions/create',
+            await axios.post('https://heyhotels.onrender.com/api/auctions/create',
                 {
                     destination,
                     rooms: parseInt(rooms), //convierto el texto a numero para SQL

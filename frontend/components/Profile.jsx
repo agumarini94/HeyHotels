@@ -13,7 +13,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const res = await axios.get('http://localhost:5005/api/auth/profile', {
+                const res = await axios.get('https://heyhotels.onrender.com/api/auth/profile', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 if (res.data.city) {
@@ -35,7 +35,7 @@ const Profile = () => {
         setLoading(true);
         
         try {
-            await axios.put('http://localhost:5005/api/auth/update-profile',
+            await axios.put('https://heyhotels.onrender.com/api/auth/update-profile',
                 { city },
                 { headers: { Authorization: `Bearer ${token}` } });
             setCurrentCity(city); //Actualiza el texto visual. 

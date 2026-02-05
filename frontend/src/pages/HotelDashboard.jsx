@@ -35,7 +35,7 @@ const HotelDashboard = () => {
         const token = localStorage.getItem('token');
         try {
             //* HAGO EL GET, PIDIENDO LA LISTA DE SUBASTAS. Y ENVIO EL TOKEN PARA QUE EL SERVER CONFIE .
-            const res = await axios.get('http://localhost:5005/api/auctions/list', {
+            const res = await axios.get('https://heyhotels.onrender.com/api/auctions/list', {
                 //axios get --> Devuelve una promesa. Await espera que traiga el resultado antes de seguir. 
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -112,7 +112,7 @@ return result;
 
         try {
             //* CREO EL POST PARA LA TABLA DE BIDS EN LA BD 
-            await axios.post('http://localhost:5005/api/bids/place',
+            await axios.post('https://heyhotels.onrender.com/api/bids/place',
                 {
                     auction_id: auctionId, // --> ID del request a la que responde el hotel
                     price: parseFloat(price), // --> paso a numero real 
@@ -141,7 +141,7 @@ return result;
         const token = localStorage.getItem('token');
         if (window.confirm("Are u sure that u want to cancel the dib ? The company wont be see anymore")) {
             try {
-                await axios.delete(`http://localhost:5005/api/auctions/bid/${bidId}`, {
+                await axios.delete(`https://heyhotels.onrender.com/api/auctions/bid/${bidId}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 fetchAuctions(); // PARA REFRESCAR LA LISTA

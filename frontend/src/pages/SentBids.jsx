@@ -14,7 +14,7 @@ const SentBids = () => {
     const loadSendBids = useCallback(async () => {
         try {
             //HAGO LA PETICION GET A LA RUTA
-            const res = await axios.get('http://localhost:5005/api/auctions/my-sent-bids', {
+            const res = await axios.get('https://heyhotels.onrender.com/api/auctions/my-sent-bids', {
                 //Envio el token a los headers por seguridad.
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -44,7 +44,7 @@ const SentBids = () => {
         if (window.confirm("Are u sure that u want to withdraw this bid?")) {
             try {
                 //Envio la peticion DELETE al servidor con el id de la oferta que quiero borrar: 
-                await axios.delete(`http://localhost:5005/api/auctions/bid/${bidId}`, {
+                await axios.delete(`https://heyhotels.onrender.com/api/auctions/bid/${bidId}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 //si se borro con exito, vuelvo a cargar la lista para que desaparezca 

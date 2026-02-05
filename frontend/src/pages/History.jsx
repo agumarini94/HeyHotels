@@ -14,7 +14,7 @@ const History = () => {
     const loadHistory = useCallback(async () => {
         const endpoint = role === 'company' ? 'history-company' : 'history-hotel';
         try {
-            const res = await axios.get(`http://localhost:5005/api/auctions/${endpoint}`, {
+            const res = await axios.get(`https://heyhotels.onrender.com/api/auctions/${endpoint}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setList(res.data);
@@ -31,7 +31,7 @@ const History = () => {
     const deleteFromHistory = async (id) => {
         if (window.confirm("Are u sure that u want delete this auction ?")) {
             try {
-                await axios.delete(`http://localhost:5005/api/auctions/auction/${id}`, {
+                await axios.delete(`https://heyhotels.onrender.com/api/auctions/auction/${id}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 loadHistory(); //refresca la lista

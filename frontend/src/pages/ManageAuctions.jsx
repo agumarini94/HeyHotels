@@ -13,7 +13,7 @@ const ManageAuctions = () => {
 
     const fetchRequests = async () => {
         try {
-            const res = await axios.get('http://localhost:5005/api/auctions/list', {
+            const res = await axios.get('https://heyhotels.onrender.com/api/auctions/list', {
                 headers: { Authorization: `Bearer ${token}` }
             });
             //FILTRO PARA QUEDARNOS CON LOS VALORES QUE SOLO SEAN ARRAY: 
@@ -36,7 +36,7 @@ const ManageAuctions = () => {
     const handleViewBids = async (id) => {
         try {
             //pido al backedn las subastas que pertenecen a este id.
-            const res = await axios.get(`http://localhost:5005/api/auctions/${id}/bids`, {
+            const res = await axios.get(`https://heyhotels.onrender.com/api/auctions/${id}/bids`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setSelectedBids(res.data); //guardo las subastas encontradas. 
@@ -50,7 +50,7 @@ const ManageAuctions = () => {
     const handleAccept = async (auctionId, bidId) => {
         try {
             //PATCH SE USA PARA ACTUALIZAR UNA PARTE DEL ESTADO. (De open a close)
-            await axios.patch('http://localhost:5005/api/auctions/accept-bid',
+            await axios.patch('https://heyhotels.onrender.com/api/auctions/accept-bid',
                 { auction_id: auctionId, bid_id: bidId },
                 { headers: { Authorization: `Bearer ${token}` } }
             );
@@ -66,7 +66,7 @@ const ManageAuctions = () => {
     //* FUNCION PARA BORRAR SUBASTAS CREADAS POR LA EMPRESA: 
     const deleteAuction = async (id) => {
         if (window.confirm("Are u sure that u want delete ? Also will be deleted all the Bid recibed")) {
-            await axios.delete(`http://localhost:5005/api/auctions/auction/${id}`, {
+            await axios.delete(`https://heyhotels.onrender.com/api/auctions/auction/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             fetchRequests(); //recarga la lista 
