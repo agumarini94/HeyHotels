@@ -6,7 +6,7 @@ import HotelDashboard from './pages/HotelDashboard'; //hotel
 import ManageAuctions from './pages/ManageAuctions';
 import Register from './pages/Register';
 import History from './pages/History';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import SentBids from './pages/SentBids';
 import Profile from '../components/Profile';
 function App() {
