@@ -2,6 +2,17 @@
 
 A full-stack auction platform that connects companies with hotels. Companies post accommodation requests, hotels submit competitive bids, and the best deal wins.
 
+## 🚀 Live Demo
+
+**[hey-hotels.vercel.app](https://hey-hotels.vercel.app)**
+
+| Role | Email | Password |
+|---|---|---|
+| Company | `companytest@company.com` | `companytest` |
+| Hotel | `hoteltest@test.com` | `hoteltest` |
+
+> ⏳ The backend runs on Render's free tier — the first request can take ~50 seconds while the server wakes up.
+
 ## How It Works
 
 **For Companies**
